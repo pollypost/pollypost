@@ -1,0 +1,303 @@
+/**
+ *  This file is part of Pollypost, inline editing for static sites.
+ *  Copyright (C) 2015 more onion
+ *
+ *  Pollypost is free software: you can use, redistribute and/or modify it
+ *  under the terms of the GNU General Public License version 3 or later.
+ *  See LICENCE.txt or <http://www.gnu.org/licenses/> for more details.
+ */
+
+
+/* ==================================================================
+ * Variables
+ * ================================================================== */
+
+@import 'variable-overrides';
+
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+
+$brand-primary: #337ab7 !default;
+$text-color: #333333 !default;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$ck-selected-button-bg: #fd7 !default;
+
+$split-screen-editor-header-height: 64px !default;
+$split-screen-editor-width: 45% !default;
+
+
+/* ==================================================================
+ * Editier Bar
+ * ================================================================== */
+
+#editier-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  font-size: 18px;
+  background-color: transparent;
+
+  .bar-inner {
+    padding: 15px;
+    border-bottom: 2px solid;
+  }
+
+  button {
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .popover.list-group {
+    .popover-content {
+      padding: 0;
+    }
+    .list-group-item {
+      border-width: 1px 0 0 0;
+
+      &:first-child {
+        border-width: 0;
+      }
+    }
+  }
+
+  .revision {
+    display: inline-block;
+    padding: 5px 15px;
+  }
+}
+
+/* ---------- view mode --------------------------------------------- */
+
+#editier-bar .view-mode {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.9);
+
+  button {
+    border-color: black;
+    background-color: rgba(100, 100, 100, 0.9);
+    color: lighten($text-color, 50%);
+
+    &:hover, &:focus {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    &:disabled {
+      color: #aaa;
+      background-color: rgba(40, 40, 40, 0.9);
+    }
+  }
+}
+
+/* ---------- edit mode --------------------------------------------- */
+
+#editier-bar .edit-mode {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(250, 250, 250, 0.9);
+
+  button {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: lighten($text-color, 25%);
+
+    &:hover, &:focus {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    &:disabled {
+      color: #aaa;
+      background-color: rgba(240, 240, 240, 0.9);
+    }
+  }
+
+  button[name=save] {
+    background-color: rgba(150, 175, 60, 0.9);
+    color: white;
+
+    &:hover {
+      background-color: rgba(150, 175, 60, 1);
+    }
+  }
+}
+
+
+/* ==================================================================
+ * Modals
+ * ================================================================== */
+
+.polly .modal {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .modal-content {
+    background-color: #fafafa;
+  }
+}
+
+.polly #loading {
+  .modal-dialog {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .modal-content {
+      position: relative;
+      height: 50px;
+      width: 200px;
+      top: -20px;
+      left: -100px;
+      background: transparent;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: none;
+      line-height: 48px;
+      border-radius: 6px;;
+      text-align: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      .modal-body {
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* ==================================================================
+ * HTML Editor
+ * ================================================================== */
+
+/* ---------- html editor modal ------------------------------------- */
+
+#html-editor {
+
+  .modal-dialog {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      width: auto;
+      margin: 30px;
+    }
+    @media (min-width: $screen-md-min) {
+      margin: 30px auto;
+    }
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .btn-split-screen {
+    display: none;
+  }
+
+  .ace_tooltip {
+    background-image: none;
+    background-color: lighten($brand-primary, 40%);
+    color: $text-color;
+    font-family: $font-family-sans-serif;
+    font-size: 0.9em;
+
+    border: none;
+    padding: 8px;
+    white-space: normal;
+
+    position: absolute;
+    top: auto!important;
+    left: auto!important;
+    right: 0;
+    bottom: 0;
+    max-width: 60%;
+  }
+}
+
+/* ---------- spilt screen html editor ------------------------------ */
+
+.split-screen-editor {
+  @media (min-width: 1600px) {
+
+    &.modal-open {
+      margin-left: $split-screen-editor-width;
+      overflow: visible;
+
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    #html-editor {
+      width: $split-screen-editor-width;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: transparent;
+
+
+      .modal-lg {
+        margin: 0;
+        width: 98%;
+        height: 100%;
+      }
+      .modal-content {
+        height: 100%;
+        border-radius: 0;
+      }
+      .modal-header {
+        height: $split-screen-editor-header-height;
+      }
+      .modal-title {
+        display: inline-block;
+        padding-top: 3px;
+      }
+      .btn-split-screen {
+        display: block;
+        float: right;
+        margin-left: 5px;
+      }
+      .modal-body {
+        position: absolute;
+        top: $split-screen-editor-header-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      #editor {
+        height: 100%!important;
+      }
+      .modal-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+
+/* ==================================================================
+ * Inline Editor
+ * ================================================================== */
+
+/* ---------- flat skin overwrites ---------------------------------- */
+
+.cke {
+  .cke_combo_button, .cke_toolgroup {
+    border: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+  }
+  .cke_combo_arrow {
+    border-top-width: 4px;
+  }
+  .cke_button_on,
+  .cke_combo_on a.cke_combo_button,
+  .cke_combo_off a.cke_combo_button:active {
+    background-color: $ck-selected-button-bg;
+
+    &:hover {
+      background-color: darken($ck-selected-button-bg, 5%);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/**
+ *  This file is part of Pollypost, inline editing for static sites.
+ *  Copyright (C) 2015 more onion
+ *
+ *  Pollypost is free software: you can use, redistribute and/or modify it
+ *  under the terms of the GNU General Public License version 3 or later.
+ *  See LICENCE.txt or <http://www.gnu.org/licenses/> for more details.
+ */
+
+@import 'variable-overrides';
+
+// no need to include the "font-awesome-sprockets" partial
+// as we are setting the env up ourself
+// font-awesome-sass is somewhat biased: it assumes we are using
+// rails or other gems which provide additional helpers
+//@import "font-awesome-sprockets";
+$fa-font-path: 'font-awesome-custom/';
+$fa-font-name: "fontawesome-custom";
+$fa-font-family: "FontAwesome-custom";
+// font-awesome/path defines @font-face and has to be toplevel
+// font-awesome/variables is needed by .../path
+@import "font-awesome/variables";
+@import "font-awesome/path";
+// set the used variables to the codes used in the custom font file
+// TODO export font with "correct" codes
+$fa-var-code: "\e803";
+$fa-var-bars: "\e802";
+$fa-var-plus-circle: "\e800";
+$fa-var-times: "\e801";
+
+// we define our namespace so that we do not destroy existing site styles
+.polly {
+
+@import "font-awesome-custom";
+@import 'bootstrap-custom';
+
+// override styles here
+
+} // end .polly namespace
+
+@import 'editor';

@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontawesome-custom" horiz-adv-x="1000" >
+<font-face font-family="fontawesome-custom" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="plus-circled" unicode="&#xe800;" d="m679 314v72q0 14-11 25t-25 10h-143v143q0 15-11 25t-25 11h-71q-15 0-25-11t-11-25v-143h-143q-14 0-25-10t-10-25v-72q0-14 10-25t25-11h143v-142q0-15 11-25t25-11h71q15 0 25 11t11 25v142h143q14 0 25 11t11 25z m178 36q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+<glyph glyph-name="close" unicode="&#xe801;" d="m724 112q0-22-15-38l-76-76q-16-15-38-15t-38 15l-164 165-164-165q-16-15-38-15t-38 15l-76 76q-16 16-16 38t16 38l164 164-164 164q-16 16-16 38t16 38l76 76q16 16 38 16t38-16l164-164 164 164q16 16 38 16t38-16l76-76q15-15 15-38t-15-38l-164-164 164-164q15-15 15-38z" horiz-adv-x="785.7" />
+<glyph glyph-name="navicon" unicode="&#xe802;" d="m857 100v-71q0-15-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 25t25 11h785q15 0 26-11t10-25z m0 286v-72q0-14-10-25t-26-10h-785q-15 0-25 10t-11 25v72q0 14 11 25t25 10h785q15 0 26-10t10-25z m0 285v-71q0-15-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 26t25 10h785q15 0 26-10t10-26z" horiz-adv-x="857.1" />
+<glyph glyph-name="code" unicode="&#xe803;" d="m344 69l-28-28q-5-5-12-5t-13 5l-260 260q-6 6-6 13t6 13l260 260q5 6 13 6t12-6l28-28q6-5 6-13t-6-12l-219-220 219-219q6-6 6-13t-6-13z m330 596l-208-721q-2-7-9-11t-13-1l-34 9q-8 3-11 9t-2 14l208 720q3 8 9 11t13 2l35-10q7-2 11-9t1-13z m367-364l-260-260q-6-5-13-5t-13 5l-28 28q-5 6-5 13t5 13l219 219-219 220q-5 5-5 12t5 13l28 28q6 6 13 6t13-6l260-260q5-5 5-13t-5-13z" horiz-adv-x="1071.4" />
+</font>
+</defs>
+</svg>
