@@ -35,12 +35,12 @@ Enable Uploadcare in Pollypost by setting the image storage to 'uploadcare' and 
 
 Install pollypost yourself as:
 
-    $ gem install pollypost --pre
+    $ gem install pollypost
 
 Or, if you're using [Bundler](http://bundler.io/), add this line to your application's Gemfile:
 
 ```ruby
-gem 'pollypost', "0.0.1.pre"
+gem 'pollypost'
 ```
 
 And then execute:
