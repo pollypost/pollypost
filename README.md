@@ -86,9 +86,17 @@ To change the location or name of the Pollypost assets folder, add your custom p
 
 ### Marking content for editing
 
-To edit content with Pollypost, you have to first mark it as editable: enclose it in a wrapper that has the class `edit-this` and an additional attribute `about` set to a unique identifier (this is used for identifying content files). This wrapper should not be in the same file as the content! In nanoc, we recommend to put it in the layout file.
+To edit content with Pollypost, you have to first mark it as editable: enclose it in a wrapper that has the class `edit-this` and an additional attribute `about` that is set to that file's path in the backend. With nanoc-polly, you can use `item_about @item` to generate its value (see [nanoc-polly](https://github.com/pollypost/nanoc-polly) for details).
 
-Also make sure there is no templating (e.g. erb) used in the editable content. It would be replaced by the editor, since the editor is working on the compiled site with the compiled content and does not know about any templates. On save, the whole content file will be replaced with the editor's content. Don't worry about metadata, a metadata header will be preserved.
+This wrapper should not be in the same file as the content! In nanoc, we recommend to put it in the layout file.
+
+```html
+<div class="edit-this" about="<%= item_about @item %>">
+  <%= yield %>
+</div>
+```
+
+Also make sure there is no templating (e.g. erb) used in the editable content. It would be replaced by the editor, since the editor is working on the compiled site with the compiled content and does not know about any templates. On save, the whole content file will be replaced with the editor's content. Don't worry about metadata, the metadata header will be preserved.
 
 
 ## Usage
