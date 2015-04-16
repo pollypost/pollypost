@@ -15,7 +15,7 @@ namespace :polly do
   namespace :assets do
     desc 'Precompile assets for the polly interface'
     task :precompile, [:output_dir] do |task, args|
-      args.with_defaults(:output_dir => 'public/assets')
+      args.with_defaults(:output_dir => 'public/polly')
       output_root = File.expand_path(args[:output_dir])
 
       env = Sprockets::Environment.new

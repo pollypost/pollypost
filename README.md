@@ -75,7 +75,9 @@ Then you should be able to generate the Pollypost assets with the command
 
     $ rake polly:assets:precompile
 
-The first time, this will add a `public/assets` folder to your nanoc project with all the assets needed by Pollypost. Every time you run the command again, the files in this folder will be updated.
+(If you use bundle and the path is not found, try to put `bundle exec` before the command!)
+
+The first time, this will add a `public/polly` folder to your nanoc project with all the assets needed by Pollypost. Every time you run the command again, the files in this folder will be updated.
 
 To change the location or name of the Pollypost assets folder, add your custom path when running rake:
 
