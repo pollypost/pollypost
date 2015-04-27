@@ -1,9 +1,11 @@
 # Pollypost
 
-Have you met Polly? Polly likes crackers. And inline editing.
+Polly likes crackers. And inline editing.
 
-As a treat to Polly (and everyone else), Pollypost makes inline editing possible even for static sites. Edit pages and manage your site from your browser!
-Pollypost provides an interface for managing static sites via a webbrowser. Browser based inline editing is made possible by connecting editing tools to a compatible backend (e.g. nanoc-polly).
+As a treat to Polly (and all the pirates on this planet), Pollypost lets you work even on your static pages with inline editors. You can edit pages and manage your site from within your browser!
+
+Then the client side editing interface can save your changes via a compatible backend (e.g. nanoc-polly). Finally you can have the best of two worlds: static sites and great authoring experience.
+
 
 ## Integrations
 
